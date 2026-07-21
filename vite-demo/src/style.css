@@ -1,0 +1,204 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+  padding: 2rem;
+}
+
+#app {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 1.8rem;
+}
+
+.badge {
+  padding: 0.3rem 0.75rem;
+  background: #646cff;
+  color: white;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 25px rgb(0 0 0 / 8%);
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.product-form {
+  display: grid;
+  grid-template-columns: 1fr 180px auto;
+  gap: 1rem;
+  align-items: end;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-field label {
+  font-weight: 600;
+}
+
+.form-field input {
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.form-field input:focus {
+  border-color: #646cff;
+  outline: 3px solid rgb(100 108 255 / 15%);
+}
+
+.primary-button,
+.secondary-button,
+.delete-button {
+  padding: 0.75rem 1rem;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.primary-button {
+  color: white;
+  background: #646cff;
+}
+
+.primary-button:hover {
+  background: #535bf2;
+}
+
+.secondary-button {
+  color: #374151;
+  background: #e5e7eb;
+}
+
+.delete-button {
+  padding: 0.45rem 0.75rem;
+  color: #991b1b;
+  background: #fee2e2;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+  color: #4b5563;
+  background: #f9fafb;
+}
+
+.empty-message {
+  color: #6b7280;
+  text-align: center;
+  padding: 1rem;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.summary-item {
+  padding: 1rem;
+  text-align: center;
+  background: #f9fafb;
+  border-radius: 10px;
+}
+
+.summary-item span {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: #6b7280;
+}
+
+.summary-item strong {
+  font-size: 1.15rem;
+}
+
+.summary-total {
+  color: white;
+  background: #646cff;
+}
+
+.summary-total span {
+  color: #e0e7ff;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.message {
+  min-height: 1.5rem;
+  margin: 1rem 0 0;
+  font-weight: 600;
+}
+
+.message.error {
+  color: #b91c1c;
+}
+
+.message.success {
+  color: #047857;
+}
+
+@media (max-width: 700px) {
+  .product-form {
+    grid-template-columns: 1fr;
+  }
+
+  .summary {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 450px) {
+  .summary {
+    grid-template-columns: 1fr;
+  }
+}
